@@ -1,0 +1,25 @@
+document.getElementById("bookForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const bookName = document.getElementById("bookName").value;
+  const authorName = document.getElementById("authorName").value;
+  const category = document.getElementById("category").value;
+
+  const table = document.getElementById("bookTable").getElementsByTagName("tbody")[0];
+  const newRow = table.insertRow();
+
+  newRow.innerHTML = `
+    <td>${bookName}</td>
+    <td>${authorName}</td>
+    <td>${category}</td>
+    <td><button onclick="deleteRow(this)">حذف</button></td>
+  `;
+
+  // مسح الحقول بعد الإضافة
+  document.getElementById("bookForm").reset();
+});
+
+function deleteRow(button) {
+  const row = button.parentElement.parentElement;
+  row.remove();
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>نظام تسجيل الكتب</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>نظام تسجيل الكتب</h2>
+
+    <form id="bookForm">
+      <input type="text" id="bookName" placeholder="اسم الكتاب" required>
+      <input type="text" id="authorName" placeholder="اسم المؤلف" required>
+      <input type="text" id="category" placeholder="التصنيف" required>
+      <button type="submit">إضافة</button>
+    </form>
+
+    <table id="bookTable">
+      <thead>
+        <tr>
+          <th>اسم الكتاب</th>
+          <th>المؤلف</th>
+          <th>التصنيف</th>
+          <th>إجراءات</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- الصفوف ستُضاف هنا -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
